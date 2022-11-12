@@ -183,7 +183,9 @@ console.log(sortedByAgeInc);
 
 //* 13 - What is the output of the following code?
 ////the answer "start" "end" "Here is your data"
-//! still need to find out why
+////The callback function will run only after the program has finished executing the code from top to bottom (even if the delay is 0ms)
+////The main difference between synchronous and asynchronous callbacks is that synchronous callbacks are executed immediately, whereas
+////the execution of asynchronous callbacks is deferred to a later point in time.
 
 //* 14 - What is the output of the following code?
 const nums = [1, 2, 3, 4, 5];
@@ -208,3 +210,73 @@ console.log(doubled);
 //// we are using forEach()
 //// forEach() is not meant to return anything. It is used to basically read the content of the array
 ////thats is one of the main differences between map() and forEach()
+
+//* 16 - What is going to be printed in console?
+
+let x = 2;
+console.log(x);
+if (true) {
+  let x = 4;
+  console.log(x);
+}
+console.log(x);
+//// the answer is 2, 4, 2
+//? Why?
+//// because let declaration declares a block-scoped local variable, the let x from outside the function is not the same as inside of the function
+
+//* 17 - A callback is...
+//// the answer is: a function that will be called at some point in the future
+////example
+const button = document.getElementById("button");
+function callback() {
+  console.log("Hello world");
+}
+
+button.addEventListener("click", callback);
+
+//* 18 - Can we use callbacks to write asynchronous code?
+//// the answer is: TRUE
+////Whether a callback is executed synchronously or asynchronously depends on the function which calls it.
+////If the function is asynchronous, then the callback is asynchronous too.
+
+//* 19 - The "graduated" value of this "const" object variable can be changed.
+const student4 = {
+  school: "Strive School",
+  program: "Full Stack",
+  graduated: false,
+};
+student4.graduated = true;
+console.log(student4);
+//// the answer is: Yes, we can change it.
+//// you got the same result using the SPREAD OPERATOR
+////Example
+const student5 = {
+  school: "Strive School",
+  program: "Full Stack",
+  graduated: false,
+};
+const student6 = {
+  graduated: true,
+};
+
+console.log({ ...student5, ...student6 });
+//* 20 - A callback is a ____ passed into a function as an argument
+//// the answer is: function
+
+//* 21 - What is going to be printed in console?
+const student7 = {
+  name1: "Diego",
+  surname: "Banovaz",
+};
+const { name1 } = student;
+console.log(name);
+////the answer is Diego
+//? Why?
+////we are using destructuring here
+////Destructuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that’s more convenient.
+
+//* 22 - When you see three dots syntax (...), what kind of features are getting used?
+////the answer is: Either rest parameters or the spread operator
+
+//* 23 - The array.map() method returns
+//// the answer is:a new array with different length than the original one
