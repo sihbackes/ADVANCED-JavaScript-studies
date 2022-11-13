@@ -62,4 +62,7 @@ const renderList = () => {
     selectedMoviesList.innerHTML += `<li>${element}</li>`;
   });
 };
-getData("horror");
+
+window.onload = () => {
+  getData("horror");
+};
